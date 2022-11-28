@@ -60,12 +60,14 @@ function Homemain() {
             </div>
           </Link>
         </div>
-        <a className="sw-link">
-          <div className="menu-link">
-            <p>Selected Work</p>
-            <div className="circle"></div>
-          </div>
-        </a>
+        <div className="sw-link">
+          <Link to="/gallery">
+            <div className="menu-link">
+              <p>Selected Work</p>
+              <div className="circle"></div>
+            </div>
+          </Link>
+        </div>
 
         <a className="tt-link">
           <div className="menu-link">

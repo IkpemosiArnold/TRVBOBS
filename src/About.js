@@ -16,7 +16,7 @@ function About() {
     }
     const ctx = gsap.context(() => {
       tl.current = gsap.timeline({ repeat: -1 }).to(".starry-bg", {
-        backgroundPosition: "-600px 0px",
+        backgroundPosition: "0x -600px",
         ease: "Linear.easeNone",
         duration: 50,
       });

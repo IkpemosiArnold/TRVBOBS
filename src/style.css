@@ -149,7 +149,7 @@ a {
   color: #ffffff;
   align-self: end;
 
-  font-size: clamp(12x, 1rem + 0.5vw, 32px);
+  font-size: clamp(16px, 1rem + 0.2vw, 32px);
 }
 .flash {
   animation: 1s step-start 0s infinite normal none running blinker;
@@ -271,7 +271,7 @@ a {
   width: 100%;
   bottom: 0;
   box-sizing: border-box;
-  font-size: clamp(12px, 1rem + 0.5vw, 32px);
+  font-size: clamp(16px, 1rem + 0.2vw, 32px);
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: auto;
@@ -322,4 +322,40 @@ a {
   .big-body-text {
     font-size: clamp(24px, 1rem + 0.5vw, 32px);
   }
+}
+
+/*----------GALLERY PAGE ------------*/
+#gallery {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+#image-box {
+  width: calc(100vw / 4 + 100px);
+  height: auto;
+  border: 1px solid #fff;
+  background-color: azure;
+}
+.gallery-center {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.image-boxes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#beam-base {
+  width: calc(100vw / 4 + 100px);
+  height: auto;
+  transform-style: preserve-3d;
+  margin-top: 20px;
+}
+
+.next-box {
+  transform: translate3d(200vw, 0px, 0px);
 }
