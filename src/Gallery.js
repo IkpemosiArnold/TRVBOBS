@@ -25,13 +25,22 @@ function Gallery() {
     }, el);
   }, []); //
   return (
-    <div ref={el}>
+    <motion.div
+      ref={el}
+      initial={{
+        opacity: 0,
+        scale: 0.5,
+      }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1, type: "tween", ease: "linear" }}
+    >
       <div id="gallery" className="starry-bg">
         <Pnavbar />
         <Gallerybody />
         <Pfooter />
       </div>
-    </div>
+    </motion.div>
   );
 }
 export default Gallery;

@@ -28,10 +28,9 @@ function About() {
       initial={{
         opacity: 0,
         scale: 0.5,
-        backgroundColor: "black",
       }}
       animate={{ opacity: 1, scale: 1 }}
-      exit={{ opacity: 0, backgroundColor: "black" }}
+      exit={{ opacity: 0 }}
       transition={{ duration: 1, type: "tween", ease: "linear" }}
     >
       <section id="about-us" className="starry-bg">

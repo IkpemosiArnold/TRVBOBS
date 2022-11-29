@@ -10,7 +10,7 @@ function Gallerybody() {
   useEffect(() => {
     let imageBox = document.getElementById("image-box");
     let beam = document.getElementById("beam-base");
-    let srcNum = 0;
+    let srcNum = 1;
     let imgSrc;
 
     beam.addEventListener("click", () => {

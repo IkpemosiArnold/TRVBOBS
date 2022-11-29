@@ -1,5 +1,5 @@
-import "./style.css";
-import Fulllogo from "./Full with text_animated.svg";
+/*import "./style.css";
+
 function Overlay() {
   return (
     <div className="overlay">
@@ -11,3 +11,4 @@ function Overlay() {
   );
 }
 export default Overlay;
+*/
