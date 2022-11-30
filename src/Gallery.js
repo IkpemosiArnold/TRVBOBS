@@ -1,6 +1,4 @@
 import Pnavbar from "./Pnavbar";
-import Aboutbody from "./Aboutbody";
-import Pfooter from "./Pfooter";
 import Gallerybody from "./Gallerybody";
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
@@ -38,7 +36,6 @@ function Gallery() {
       <div id="gallery" className="starry-bg">
         <Pnavbar />
         <Gallerybody />
-        <Pfooter />
       </div>
     </motion.div>
   );

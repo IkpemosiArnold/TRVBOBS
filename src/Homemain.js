@@ -98,18 +98,22 @@ function Homemain() {
             </Link>
           </div>
 
-          <a className="tt-link">
-            <div className="menu-link">
-              <p>The team</p>
-              <div className="circle"></div>
-            </div>
-          </a>
-          <a className="wwd-link" href="twitter.com">
-            <div className="menu-link">
-              <p>What we do</p>
-              <div className="circle"></div>
-            </div>
-          </a>
+          <div className="tt-link">
+            <Link to="/">
+              <div className="menu-link">
+                <p>The team</p>
+                <div className="circle"></div>
+              </div>
+            </Link>
+          </div>
+          <div className="wwd-link" href="twitter.com">
+            <Link to="/services">
+              <div className="menu-link">
+                <p>What we do</p>
+                <div className="circle"></div>
+              </div>
+            </Link>
+          </div>
         </div>
       </section>
     </>

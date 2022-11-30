@@ -1,21 +1,25 @@
 import Pnavbar from "./Pnavbar";
-import Aboutbody from "./Aboutbody";
+import Servicebody from "./Servicesbody";
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { motion } from "framer-motion";
 
-function About() {
+function Services() {
   const el = useRef();
   const tl = useRef();
   useEffect(() => {
     let html = document.getElementsByTagName("html");
-    html[0].classList.add("overflow-x-hidden");
     if (html[0].classList.contains("overflow-hidden")) {
       html[0].classList.remove("overflow-hidden");
+      if (html[0].classList.contains("overflow-x-hidden")) {
+      }
+    } else if (!html[0].classList.contains("overflow-x-hidden")) {
+      html[0].classList.add("overflow-x-hidden");
     }
+
     const ctx = gsap.context(() => {
       tl.current = gsap.timeline({ repeat: -1 }).to(".starry-bg", {
-        backgroundPosition: "0x -600px",
+        backgroundPosition: "-600px 0px",
         ease: "Linear.easeNone",
         duration: 50,
       });
@@ -32,12 +36,11 @@ function About() {
       exit={{ opacity: 0 }}
       transition={{ duration: 1, type: "tween", ease: "linear" }}
     >
-      <section id="about-us" className="starry-bg">
+      <div id="services" className="starry-bg">
         <Pnavbar />
-        <Aboutbody />
-      </section>
+        <Servicebody />
+      </div>
     </motion.div>
   );
 }
-
-export default About;
+export default Services;

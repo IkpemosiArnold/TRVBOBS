@@ -8,13 +8,12 @@ let imgArray = [client1, client2];
 
 function Gallerybody() {
   useEffect(() => {
-    let imageBox = document.getElementById("image-box");
     let beam = document.getElementById("beam-base");
     let srcNum = 1;
     let imgSrc;
 
     beam.addEventListener("click", () => {
-      if (srcNum == imgArray.length - 1) {
+      if (srcNum === imgArray.length - 1) {
         srcNum = 0;
       } else {
         srcNum = srcNum + 1;
