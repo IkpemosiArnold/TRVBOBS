@@ -99,7 +99,7 @@ function Homemain() {
           </div>
 
           <div className="tt-link">
-            <Link to="/">
+            <Link to="/team">
               <div className="menu-link">
                 <p>The team</p>
                 <div className="circle"></div>

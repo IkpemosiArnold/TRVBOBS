@@ -1,4 +1,34 @@
 import moonman from "./moonman.png";
+const getRandomEmoji = () => {
+  const emojis = [
+    "🔋",
+    "🪫",
+    "🔌",
+    "💻",
+    "🖥",
+    "🖨",
+    "⌨",
+    "🖱",
+    "🖲",
+    "💽",
+    "💾",
+    "💿",
+    "📀",
+    "🧮",
+    "🚀",
+    "🛸",
+  ];
+
+  return emojis[~~(Math.random() * emojis.length)];
+};
+let icon = getRandomEmoji();
+let icon2 = getRandomEmoji();
+let icon3 = getRandomEmoji();
+let icon4 = getRandomEmoji();
+let icon5 = getRandomEmoji();
+let icon6 = getRandomEmoji();
+let icon7 = getRandomEmoji();
+let icon8 = getRandomEmoji();
 function Servicebody() {
   return (
     <div id="servicebody">
@@ -9,33 +39,18 @@ function Servicebody() {
         </p>
       </div>
 
-      <div id="marquee">
-        <p id="marquee-content">
-          {" "}
-          Website development{" "}
-          <img
-            className="marquee-img"
-            alt="Man on the moon"
-            src={moonman}
-          />{" "}
-          Graphics Design and Branding
-          <img className="marquee-img" alt="Man on the moon" src={moonman} />
-          Business Process Automation
-          <img className="marquee-img" alt="Man on the moon" src={moonman} />
+      <div className="marquee">
+        <p className="marquee-content">
+          Website development {icon} Graphics Design and Branding {icon2}{" "}
+          Business Process Automation {icon3} Application Security and
+          Consultation {icon4}{" "}
         </p>
       </div>
-      <div id="marquee">
-        <p id="marquee-content">
-          Application Security and Consultation
-          <img className="marquee-img" alt="Man on the moon" src={moonman} />
-          Mobile App Development
-          <img className="marquee-img" alt="Man on the moon" src={moonman} />
-          Web Application Development
-          <img className="marquee-img" alt="Man on the moon" src={moonman} />
-          Discovery Enhancement Services
-          <img className="marquee-img" alt="Man on the moon" src={moonman} />
-          Content Writing/Development
-          <img className="marquee-img" alt="Man on the moon" src={moonman} />
+      <div className="marquee">
+        <p className="marquee-content-2">
+          Mobile App Development {icon5} Web Application Development {icon6}{" "}
+          Discovery Enhancement Services {icon7} Content Writing/Development{" "}
+          {icon8}{" "}
         </p>
       </div>
       <button className="btn">Get a quote</button>

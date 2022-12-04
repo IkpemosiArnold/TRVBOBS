@@ -1,5 +1,6 @@
 import "./style.css";
 import navLogo from "./nav-logo.png";
+import ig from "./instagram.svg";
 import { Link } from "react-router-dom";
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
@@ -25,20 +26,10 @@ function Pnavbar() {
           <p className="go-back-text">go back</p>
         </Link>
       </div>
-      <ul>
-        <li>
-          <a className="nav-item">Ig</a>
-        </li>
-        <li>
-          <a className="nav-item">Ln</a>
-        </li>
-        <li>
-          <a className="nav-item">Fb</a>
-        </li>
-        <li>
-          <a className="nav-item">Tw</a>
-        </li>
-      </ul>
+
+      <img alt="instagram-logo" src={ig} className="ig-logo" />
+
+      <p className="contact-btn">Contact us</p>
     </nav>
   );
 }

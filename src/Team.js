@@ -1,29 +1,29 @@
 import Pnavbar from "./Pnavbar";
-import Aboutbody from "./Aboutbody";
+import Teambody from "./Teambody";
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { motion } from "framer-motion";
 
-function About() {
-  const et = useRef();
-  const tt = useRef();
+function Team() {
+  const el = useRef();
+  const tl = useRef();
   useEffect(() => {
     let html = document.getElementsByTagName("html");
     html[0].classList.add("overflow-x-hidden");
     if (html[0].classList.contains("overflow-hidden")) {
       html[0].classList.remove("overflow-hidden");
     }
-    const cxt = gsap.context(() => {
-      tt.current = gsap.timeline({ repeat: -1 }).to(".starry-bg", {
+    const ctx = gsap.context(() => {
+      tl.current = gsap.timeline({ repeat: -1 }).to(".starry-bg", {
         backgroundPosition: "-600px 0px",
         ease: "Linear.easeNone",
         duration: 50,
       });
-    }, et);
+    }, el);
   }, []); //
   return (
     <motion.div
-      ref={et}
+      ref={el}
       initial={{
         opacity: 0,
         scale: 0.5,
@@ -32,12 +32,12 @@ function About() {
       exit={{ opacity: 0 }}
       transition={{ duration: 1, type: "tween", ease: "linear" }}
     >
-      <section id="about-us" className="starry-bg">
+      <section id="team" className="starry-bg">
         <Pnavbar />
-        <Aboutbody />
+        <Teambody />
       </section>
     </motion.div>
   );
 }
 
-export default About;
+export default Team;
