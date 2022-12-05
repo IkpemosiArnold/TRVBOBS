@@ -137,7 +137,7 @@ a {
 .menu-link {
   color: #ffffff;
   text-transform: uppercase;
-  font-size: clamp(1.5rem, 2vw - 2rem, 3rem);
+  font-size: clamp(16px, 2vw - 2rem, 3rem);
   display: inline-grid;
   opacity: 0;
   cursor: pointer;
@@ -295,7 +295,7 @@ a {
   flex-shrink: 0;
   flex-basis: auto;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   top: 0;
 }
 .pages-footer {
@@ -360,11 +360,14 @@ a {
 #services {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100vh;
   color: white;
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+#servicebody {
+  overflow: hidden;
 }
 
 .services-header {
@@ -373,7 +376,6 @@ a {
 }
 .marquee {
   width: 300%;
-  height: 100%;
   display: flex;
   flex-wrap: nowrap;
   font-size: clamp(24px, 1rem + 3vw, 128px);
