@@ -457,14 +457,6 @@ a {
   #services {
     padding-top: 15vh;
   }
-  .gallery-center {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    height: 100vh;
-    justify-content: end;
-    padding-bottom: 5%;
-  }
 }
 @media (max-width: 768px) {
   .big-body-text,
