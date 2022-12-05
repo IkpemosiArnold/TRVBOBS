@@ -1,4 +1,5 @@
 import Pnavbar from "./Pnavbar";
+import Pfooter from "./Pfooter";
 import Servicebody from "./Servicesbody";
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
@@ -30,6 +31,7 @@ function Services() {
       <div id="services" className="starry-bg">
         <Pnavbar />
         <Servicebody />
+        <Pfooter />
       </div>
     </motion.div>
   );

@@ -55,7 +55,6 @@ function Servicebody() {
           Content Writing/Development <span className="emoji">{icon8}</span>{" "}
         </p>
       </div>
-      <button className="btn">Get a quote</button>
     </div>
   );
 }
