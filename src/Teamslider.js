@@ -1,59 +1,25 @@
-import React, { useEffect, useRef } from "react";
-import "./style.css";
-import executioner from "./executioner-hood.svg";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
-function Teambody() {
-  const el = useRef();
-  const tl = useRef();
-  const tl2 = useRef();
-  useEffect(() => {
-    gsap.context(() => {
-      gsap.from(".team-body", {
-        duration: 1,
-        scrollTrigger: {
-          trigger: ".team-one",
-          start: "top 50%",
-          toggleClass: "view-text",
-        },
-      });
-      gsap.from(".team-body", {
-        duration: 1,
-        scrollTrigger: {
-          trigger: ".team-two",
-          start: "top 50%",
-          toggleClass: "view-text",
-        },
-      });
-      gsap.from(".team-body", {
-        duration: 1,
-        scrollTrigger: {
-          trigger: ".team-three",
-          start: "top 50%",
-          toggleClass: "view-text",
-        },
-      });
-      gsap.from(".team-body", {
-        duration: 1,
-        scrollTrigger: {
-          trigger: ".team-four",
-          start: "top 50%",
-          toggleClass: "view-text",
-        },
-      });
-      gsap.from(".team-body", {
-        duration: 1,
-        scrollTrigger: {
-          trigger: ".team-five",
-          start: "top 50%",
-        },
-      });
-    });
-  });
+import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+const settings = {
+  infinite: true,
+  autoplay: true,
+  autoPlaySpeed: 10000,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  speed: 4000,
+  arrows: false,
+  pauseOnHover: true,
+  swipeToSlide: true,
+  Draggable: true,
+};
+
+const Teamslider = () => {
   return (
-    <div ref={el}>
-      <div className="team-body">
+    <Slider {...settings} className="slide-area">
+      <div className="slides">
         <div className="body-text">
           <p className="call-out text-center green-text">
             The Justice league is no match for this well-oiled machine!
@@ -67,7 +33,8 @@ function Teambody() {
             solving, you can bet this team will be on it.
           </p>
         </div>
-
+      </div>
+      <div>
         <div className="body-text">
           <p className="call-out">
             Farouq Usman
@@ -82,6 +49,8 @@ function Teambody() {
             valuable skills for client satisfaction.
           </p>
         </div>
+      </div>
+      <div>
         <div className="body-text">
           <p className="call-out">
             Oyinbobola Owojori
@@ -99,6 +68,8 @@ function Teambody() {
             humankind. "There's always a way to make it better".
           </p>
         </div>
+      </div>
+      <div>
         <div className="body-text">
           <p className="call-out">
             Arnold Adeyemi
@@ -117,6 +88,8 @@ function Teambody() {
             times.
           </p>
         </div>
+      </div>
+      <div>
         <div className="body-text">
           <p className="call-out">
             Solomon Ndifereke
@@ -128,6 +101,8 @@ function Teambody() {
             development, Dev-ops, Mobile and Frontend development.
           </p>
         </div>
+      </div>
+      <div>
         <div className="body-text">
           <p className="call-out">
             Eilya Amin
@@ -150,8 +125,8 @@ function Teambody() {
           </p>
         </div>
       </div>
-    </div>
+    </Slider>
   );
-}
+};
 
-export default Teambody;
+export default Teamslider;

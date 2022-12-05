@@ -14,6 +14,7 @@
 body {
   font-family: Jost, sans-serif;
   background-color: #000000;
+  overflow: hidden;
 }
 .delete {
   display: none !important;
@@ -257,31 +258,18 @@ a {
   font-weight: 500;
   font-size: 44px;
   text-align: center;
-  height: 100vh;
   color: #ffffff;
   padding: 20px;
 }
 #about-us {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
   color: #ffffff;
 }
-.pages-footer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  color: #ffffff;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  box-sizing: border-box;
-  font-size: clamp(16px, 1rem + 0.2vw, 32px);
-  flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: auto;
-}
+
 .go-back {
   padding: 0;
   margin: 0;
@@ -369,14 +357,14 @@ a {
 
 .services-header {
   text-align: center;
-  font-size: clamp(24px, 1rem + 2vw, 64px);
+  font-size: clamp(24px, 1rem + 2vw, 96px);
 }
 .marquee {
   width: 300%;
   height: 100%;
   display: flex;
   flex-wrap: nowrap;
-  font-size: clamp(24px, 1rem + 1vw, 64px);
+  font-size: clamp(24px, 1rem + 2vw, 96px);
   margin: 0;
 }
 .marquee-content {
@@ -425,6 +413,7 @@ a {
 #team {
   display: grid;
   min-height: 100vh;
+  align-items: center;
 }
 .body-text {
   font-size: clamp(1rem, 1rem + 0.5vw, 64px);
@@ -452,8 +441,25 @@ a {
   scale: 1;
   transition: 1s ease-in;
 }
+.slide-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 100vw;
+  color: #ffffff;
+}
+.question-small {
+  padding-top: 10%;
+}
+
 /*--------------MEDIA QUERIES ---------------*/
 @media (max-width: 540px) {
+  .slide-area {
+    padding-top: 20vh;
+  }
+  #services {
+    padding-top: 15vh;
+  }
 }
 @media (max-width: 768px) {
   .big-body-text,
@@ -472,5 +478,8 @@ a {
     height: 100vh;
     justify-content: end;
     padding-bottom: 5%;
+  }
+  #services {
+    padding-top: 15vh;
   }
 }

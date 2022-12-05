@@ -1,5 +1,5 @@
 import Pnavbar from "./Pnavbar";
-import Aboutbody from "./Aboutbody";
+import Aboutslider from "./Aboutslider";
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { motion } from "framer-motion";
@@ -8,11 +8,6 @@ function About() {
   const et = useRef();
   const tt = useRef();
   useEffect(() => {
-    let html = document.getElementsByTagName("html");
-    html[0].classList.add("overflow-x-hidden");
-    if (html[0].classList.contains("overflow-hidden")) {
-      html[0].classList.remove("overflow-hidden");
-    }
     const cxt = gsap.context(() => {
       tt.current = gsap.timeline({ repeat: -1 }).to(".starry-bg", {
         backgroundPosition: "-600px 0px",
@@ -34,7 +29,7 @@ function About() {
     >
       <section id="about-us" className="starry-bg">
         <Pnavbar />
-        <Aboutbody />
+        <Aboutslider />
       </section>
     </motion.div>
   );

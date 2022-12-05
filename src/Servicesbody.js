@@ -41,16 +41,18 @@ function Servicebody() {
 
       <div className="marquee">
         <p className="marquee-content">
-          Website development {icon} Graphics Design and Branding {icon2}{" "}
-          Business Process Automation {icon3} Application Security and
-          Consultation {icon4}{" "}
+          Website development <span className="emoji">{icon}</span> Graphics
+          Design and Branding <span className="emoji">{icon2}</span> Business
+          Process Automation <span className="emoji">{icon3}</span> Application
+          Security and Consultation <span className="emoji">{icon4}</span>{" "}
         </p>
       </div>
       <div className="marquee">
         <p className="marquee-content-2">
-          Mobile App Development {icon5} Web Application Development {icon6}{" "}
-          Discovery Enhancement Services {icon7} Content Writing/Development{" "}
-          {icon8}{" "}
+          Mobile App Development <span className="emoji">{icon5}</span>Web
+          Application Development <span className="emoji">{icon6}</span>{" "}
+          Discovery Enhancement Services <span className="emoji">{icon7}</span>{" "}
+          Content Writing/Development <span className="emoji">{icon8}</span>{" "}
         </p>
       </div>
       <button className="btn">Get a quote</button>

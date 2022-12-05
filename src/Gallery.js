@@ -8,12 +8,6 @@ function Gallery() {
   const el = useRef();
   const tl = useRef();
   useEffect(() => {
-    let html = document.getElementsByTagName("html");
-    if (html[0].classList.contains("overflox-hidden")) {
-    } else {
-      html[0].classList.add("overflow-hidden");
-    }
-
     const ctx = gsap.context(() => {
       tl.current = gsap.timeline({ repeat: -1 }).to(".starry-bg", {
         backgroundPosition: "-600px 0px",

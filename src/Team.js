@@ -1,5 +1,5 @@
 import Pnavbar from "./Pnavbar";
-import Teambody from "./Teambody";
+import Teamslider from "./Teamslider";
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { motion } from "framer-motion";
@@ -8,11 +8,6 @@ function Team() {
   const el = useRef();
   const tl = useRef();
   useEffect(() => {
-    let html = document.getElementsByTagName("html");
-    html[0].classList.add("overflow-x-hidden");
-    if (html[0].classList.contains("overflow-hidden")) {
-      html[0].classList.remove("overflow-hidden");
-    }
     const ctx = gsap.context(() => {
       tl.current = gsap.timeline({ repeat: -1 }).to(".starry-bg", {
         backgroundPosition: "-600px 0px",
@@ -34,7 +29,7 @@ function Team() {
     >
       <section id="team" className="starry-bg">
         <Pnavbar />
-        <Teambody />
+        <Teamslider />
       </section>
     </motion.div>
   );
