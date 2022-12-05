@@ -334,11 +334,12 @@ a {
 }
 .gallery-center {
   display: flex;
-  width: 100%;
+  width: 100vw;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  padding-top: 20vh;
 }
 .image-boxes {
   display: flex;
@@ -468,24 +469,7 @@ a {
   }
 }
 @media (max-height: 1026px) {
-  .gallery-center {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    height: 100vh;
-    justify-content: end;
-    padding-bottom: 5%;
-  }
   #services {
     padding-top: 15vh;
-  }
-}
-@media (max-height: 600px) {
-  .gallery-center {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    height: 100vh;
-    justify-content: end;
   }
 }
