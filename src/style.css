@@ -66,6 +66,7 @@ body {
   justify-content: space-between;
   align-items: center;
   height: fit-content;
+  text-transform: uppercase;
   padding: 20px;
   z-index: 9;
 }
@@ -464,7 +465,7 @@ a {
 }
 .btn {
   color: #000;
-  border: 1px solid #42ff00;
+  border: 1px solid;
 }
 
 /*--------------MEDIA QUERIES ---------------*/
