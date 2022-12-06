@@ -41,6 +41,11 @@ function Hnavbar() {
   }, 1000); // passing null instead of 1000 will cancel the interval if it is already running
   return (
     <nav className="nav">
+      <ul>
+        <li>
+          <img alt="instagram-logo" src={ig} className="ig-logo" />
+        </li>
+      </ul>
       <div className="currentTimes">
         <p>
           <span className="watHour"></span>
@@ -53,11 +58,6 @@ function Hnavbar() {
           <span className="pdtMinute"></span> PDT
         </p>
       </div>
-      <ul>
-        <li>
-          <img alt="instagram-logo" src={ig} className="ig-logo" />
-        </li>
-      </ul>
     </nav>
   );
 }

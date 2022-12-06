@@ -10,6 +10,10 @@
 .overflow-x-hidden {
   overflow-x: hidden;
 }
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
 
 body {
   font-family: Jost, sans-serif;
@@ -395,6 +399,7 @@ a {
 .contact-us {
   font-size: clamp(16px, 1rem + 0.5vw, 80px);
   text-transform: uppercase;
+  color: #000000;
 }
 
 @keyframes move {
@@ -448,6 +453,18 @@ a {
 }
 .question-small {
   padding-top: 10%;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  color: #ffffff;
+}
+.btn {
+  color: #000;
+  border: 1px solid #42ff00;
 }
 
 /*--------------MEDIA QUERIES ---------------*/

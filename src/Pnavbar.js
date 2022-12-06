@@ -26,8 +26,9 @@ function Pnavbar() {
           <img alt="nav-logo" src={navLogo} className="nav-logo" />
         </Link>
       </div>
-
-      <p className="contact-btn">Contact us</p>
+      <Link to="/contact">
+        <p className="contact-btn">Contact us</p>
+      </Link>
     </nav>
   );
 }
