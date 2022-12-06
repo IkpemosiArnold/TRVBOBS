@@ -74,12 +74,7 @@ function Homemain() {
         <h2 id="enter-button">Enter</h2>
       </div>
       <section id="main-section">
-        <object
-          id="middle-circle"
-          data={radarSvg}
-          type="image/svg+xml"
-          className="box"
-        ></object>
+        <img id="middle-circle" src={radarSvg} className="box" />
         <div className="box stack-top menu-links">
           <div className="wwa-link">
             <Link to="/about">

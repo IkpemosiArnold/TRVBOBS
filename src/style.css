@@ -380,7 +380,8 @@ a {
   font-size: clamp(24px, 1rem + 2.8vw, 128px);
 }
 .marquee {
-  width: 360%;
+  text-transform: uppercase;
+  width: 400%;
   display: flex;
   flex-wrap: nowrap;
   font-size: clamp(24px, 1rem + 2.8vw, 128px);
@@ -463,13 +464,39 @@ a {
   justify-content: center;
   color: #ffffff;
 }
-.btn {
-  color: #000;
-  border: 1px solid;
+.form-btn {
+  margin-top: 20px;
+  background-color: transparent;
+  color: #42ff00;
+  text-transform: uppercase;
+  font-weight: 300;
+  border: 1px solid #42ff00;
+  border-radius: 4px;
+  padding: 16px;
 }
-
+.form-btn:hover {
+  background-color: #42ff00;
+  color: #000000;
+  transition: 0.5s ease-in;
+}
+.form-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 20px;
+}
+.hide-question {
+  display: none;
+}
+.question {
+  transition: 0.5s ease;
+}
 /*--------------MEDIA QUERIES ---------------*/
 @media (max-width: 540px) {
+  .contact-form {
+    padding-top: 12vh;
+  }
   .slide-area {
     padding-top: 20vh;
   }

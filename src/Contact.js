@@ -30,7 +30,13 @@ const schema = {
     },
   },
 };
-
+function toggleQuestion(hideQuestion, showQuestion) {
+  if (hideQuestion.classList.contains("hide-question")) {
+  } else {
+    hideQuestion.classList.add("hide-question");
+    showQuestion.classList.remove("hide-question");
+  }
+}
 function Contact() {
   const sendEmail = (e) => {
     e.preventDefault();
@@ -89,6 +95,33 @@ function Contact() {
   const el = useRef();
   const tl = useRef();
   useEffect(() => {
+    let q1 = document.getElementById("q1");
+    let q2 = document.getElementById("q2");
+    let q3 = document.getElementById("q3");
+
+    let n1 = document.getElementById("next-1");
+    let n2 = document.getElementById("next-2");
+
+    let p1 = document.getElementById("prev-1");
+    let p2 = document.getElementById("prev-2");
+
+    n1.addEventListener("click", (e) => {
+      e.preventDefault();
+      toggleQuestion(q1, q2);
+    });
+    n2.addEventListener("click", (e) => {
+      e.preventDefault();
+      toggleQuestion(q2, q3);
+    });
+    p1.addEventListener("click", (e) => {
+      e.preventDefault();
+      toggleQuestion(q2, q1);
+    });
+    p2.addEventListener("click", (e) => {
+      e.preventDefault();
+      toggleQuestion(q3, q2);
+    });
+
     const ctx = gsap.context(() => {
       tl.current = gsap.timeline({ repeat: -1 }).to(".starry-bg", {
         backgroundPosition: "-600px 0px",
@@ -109,7 +142,7 @@ function Contact() {
     >
       <div id="contact" className="starry-bg">
         <Pnavbar />
-        <div>
+        <div className="contact-form">
           <form
             headers="application/json"
             name="contact-form"
@@ -117,14 +150,16 @@ function Contact() {
           >
             <Grid container spacing={2}>
               <Grid item xs={12}>
-                <Typography variant="h4" align="center">
-                  <strong>We'd love to hear from you!</strong>
+                <Typography variant="h5" align="center">
+                  <strong>
+                    Hi there. TheRadar would love to know more about you.
+                  </strong>
                 </Typography>
               </Grid>
-              <Grid item xs={12} sm={6}>
+              <Grid item xs={12} id="q1">
+                <span className="call-out">What's your name ?</span>
+
                 <TextField
-                  placeholder="Name"
-                  label="Name *"
                   variant="outlined"
                   size="medium"
                   name="name"
@@ -147,12 +182,18 @@ function Contact() {
                     },
                   }}
                 />
+                <div className="form-buttons">
+                  <button className="form-btn" id="next-1">
+                    Next
+                  </button>
+                </div>
               </Grid>
 
-              <Grid item xs={12} sm={6}>
+              <Grid item xs={12} className="hide-question question" id="q2">
+                <span className="call-out">
+                  An email we may get back to you on ?
+                </span>
                 <TextField
-                  placeholder="E-mail"
-                  label="E-mail *"
                   variant="outlined"
                   size="medium"
                   name="email"
@@ -174,11 +215,21 @@ function Contact() {
                     },
                   }}
                 />
+                <div className="form-buttons">
+                  <button className="form-btn " id="prev-1">
+                    Previous
+                  </button>
+                  <button className="form-btn" id="next-2">
+                    Next
+                  </button>
+                </div>
               </Grid>
-              <Grid item xs={12} sm={6}>
+              <Grid item xs={12} className="hide-question question" id="q3">
+                <span className="call-out">
+                  Thanks for letting us know. Now, how would you like TheRadar
+                  to help you?
+                </span>
                 <TextField
-                  placeholder=""
-                  label="Message *"
                   variant="outlined"
                   size="medium"
                   name="message"
@@ -202,15 +253,25 @@ function Contact() {
                     },
                   }}
                 />
+                <div className="form-buttons">
+                  <button className="form-btn" id="prev-2">
+                    Previous
+                  </button>
+                </div>
               </Grid>
-              <Grid item xs={12}>
+              <Grid
+                item
+                xs
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+              >
                 <Button
                   size="large"
                   variant="contained"
                   type="submit"
                   color="primary"
                   disabled={!formState.isValid}
-                  className="btn"
                 >
                   Send
                 </Button>
