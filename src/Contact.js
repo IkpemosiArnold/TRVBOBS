@@ -148,7 +148,7 @@ function Contact() {
             name="contact-form"
             onSubmit={sendEmail}
           >
-            <Grid container spacing={2}>
+            <Grid container spacing={5}>
               <Grid item xs={12}>
                 <Typography variant="h5" align="center">
                   <strong>
@@ -157,10 +157,10 @@ function Contact() {
                 </Typography>
               </Grid>
               <Grid item xs={12} id="q1">
-                <span className="call-out">What's your name ?</span>
+                <p className="call-out contact-text">What's your name ?</p>
 
                 <TextField
-                  variant="outlined"
+                  variant="standard"
                   size="medium"
                   name="name"
                   id="name"
@@ -173,12 +173,18 @@ function Contact() {
                   type="text"
                   value={formState.values.name || ""}
                   sx={{
+                    paddingLeft: "5vw",
+                    paddingRight: "5vw",
                     ".MuiFormLabel-root": {
                       color: "white",
                     },
                     ".MuiInputBase-root": {
-                      backgroundColor: "grey",
-                      opacity: "0.5",
+                      backgroundColor: "transparent",
+                      borderBottom: "0.5px solid white",
+                      color: "white",
+                    },
+                    ".MuiInputBase-input": {
+                      textAlign: "center !important",
                     },
                   }}
                 />
@@ -190,9 +196,9 @@ function Contact() {
               </Grid>
 
               <Grid item xs={12} className="hide-question question" id="q2">
-                <span className="call-out">
+                <p className="call-out contact-text">
                   An email we may get back to you on ?
-                </span>
+                </p>
                 <TextField
                   variant="outlined"
                   size="medium"
@@ -206,12 +212,18 @@ function Contact() {
                   type="email"
                   value={formState.values.email || ""}
                   sx={{
+                    paddingLeft: "5vw",
+                    paddingRight: "5vw",
                     ".MuiFormLabel-root": {
                       color: "white",
                     },
                     ".MuiInputBase-root": {
-                      backgroundColor: "grey",
-                      opacity: "0.5",
+                      backgroundColor: "transparent",
+                      borderBottom: "0.5px solid white",
+                      color: "white",
+                    },
+                    ".MuiInputBase-input": {
+                      textAlign: "center !important",
                     },
                   }}
                 />
@@ -225,10 +237,10 @@ function Contact() {
                 </div>
               </Grid>
               <Grid item xs={12} className="hide-question question" id="q3">
-                <span className="call-out">
+                <p className="call-out contact-text">
                   Thanks for letting us know. Now, how would you like TheRadar
                   to help you?
-                </span>
+                </p>
                 <TextField
                   variant="outlined"
                   size="medium"
@@ -244,12 +256,18 @@ function Contact() {
                   type="text"
                   value={formState.values.message || ""}
                   sx={{
+                    paddingLeft: "5vw",
+                    paddingRight: "5vw",
                     ".MuiFormLabel-root": {
                       color: "white",
                     },
                     ".MuiInputBase-root": {
-                      backgroundColor: "grey",
-                      opacity: "0.5",
+                      backgroundColor: "transparent",
+                      borderBottom: "0.5px solid white",
+                      color: "white",
+                    },
+                    ".MuiInputBase-input": {
+                      textAlign: "center !important",
                     },
                   }}
                 />

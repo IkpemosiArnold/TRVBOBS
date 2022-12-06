@@ -483,14 +483,19 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-left: 10px;
-  padding-right: 20px;
+  padding-left: 5vw;
+  padding-right: 5vw;
 }
 .hide-question {
   display: none;
 }
 .question {
   transition: 0.5s ease;
+}
+.contact-text {
+  padding-left: 5vw;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 /*--------------MEDIA QUERIES ---------------*/
 @media (max-width: 540px) {
