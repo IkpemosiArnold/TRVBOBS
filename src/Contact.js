@@ -2,12 +2,13 @@ import Pnavbar from "./Pnavbar";
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { Typography, Grid, Button, TextField } from "@mui/material";
 import emailjs from "emailjs-com";
 import validate from "validate.js";
-const USER_ID = "process.env.REACT_APP_EMAILJS_USERID";
-const TEMPLATE_ID = " process.env.REACT_APP_EMAILJS_TEMPLATEID";
-const SERVICE_ID = "process.env.REACT_APP_EMAILJS_SERVICEID";
+const PUBLIC_KEY = "_O76ZlQ0wx24Gvbh9";
+const TEMPLATE_ID = "template_x1cmt9p";
+const SERVICE_ID = "service_fj3fk8k";
 
 const schema = {
   name: {
@@ -42,8 +43,13 @@ function Contact() {
     e.preventDefault();
 
     emailjs
-      .sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
-      .then((res) => console.log("SUCCESS!", res.status, res.text))
+      .sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY)
+      .then((res) => {
+        console.log("SUCCESS!", res.status, res.text);
+        let success = document.getElementById("success-message");
+        let container = document.getElementById("contact-container");
+        toggleQuestion(container, success);
+      })
       .catch((error) => console.log("FAILED...", error));
 
     setFormState((formState) => ({
@@ -142,14 +148,22 @@ function Contact() {
     >
       <div id="contact" className="starry-bg">
         <Pnavbar />
-        <div className="contact-form">
+        <div className="contact-form" id="contact-container">
           <form
             headers="application/json"
             name="contact-form"
             onSubmit={sendEmail}
           >
             <Grid container spacing={5}>
-              <Grid item xs={12}>
+              <Grid
+                item
+                xs={12}
+                sx={{
+                  ".MuiTypography-root": {
+                    fontFamily: "Jost, sans-serif",
+                  },
+                }}
+              >
                 <Typography variant="h5" align="center">
                   <strong>
                     Hi there. TheRadar would love to know more about you.
@@ -288,8 +302,14 @@ function Contact() {
                   size="large"
                   variant="contained"
                   type="submit"
-                  color="primary"
+                  color="success"
                   disabled={!formState.isValid}
+                  sx={{
+                    ".MuiButtonBase-root": {
+                      backgroundColor: "#42ff00",
+                      color: "#000000",
+                    },
+                  }}
                 >
                   Send
                 </Button>
@@ -297,6 +317,18 @@ function Contact() {
             </Grid>
           </form>
         </div>
+        <p id="success-message" className="call-out contact-text hide-question">
+          Thank you reaching out to us, we'll get back to you as soon as we get
+          your message.
+          <br />
+          While you wait, take a look at some of our work{" "}
+          <span>
+            <Link to="/gallery">/here/</Link>
+          </span>
+        </p>
+        <p id="failure-message" className="call-out contact-text hide-question">
+          Something went wrong, Please refresh the page and try again.
+        </p>
       </div>
     </motion.div>
   );

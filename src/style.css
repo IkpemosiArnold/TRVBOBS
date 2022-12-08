@@ -479,6 +479,7 @@ a {
   color: #000000;
   transition: 0.5s ease-in;
 }
+
 .form-buttons {
   display: flex;
   flex-direction: row;
@@ -500,7 +501,7 @@ a {
 /*--------------MEDIA QUERIES ---------------*/
 @media (max-width: 540px) {
   .contact-form {
-    padding-top: 12vh;
+    padding-top: 20vh;
   }
   .slide-area {
     padding-top: 20vh;
