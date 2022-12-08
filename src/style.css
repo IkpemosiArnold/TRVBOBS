@@ -498,6 +498,12 @@ a {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+.underline {
+  text-decoration: underline;
+}
+.red-text {
+  color: #f08585;
+}
 /*--------------MEDIA QUERIES ---------------*/
 @media (max-width: 540px) {
   .contact-form {

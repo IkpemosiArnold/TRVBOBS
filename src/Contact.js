@@ -50,7 +50,12 @@ function Contact() {
         let container = document.getElementById("contact-container");
         toggleQuestion(container, success);
       })
-      .catch((error) => console.log("FAILED...", error));
+      .catch((error) => {
+        console.log("FAILED...", error);
+        let failure = document.getElementById("failure-message");
+        let container = document.getElementById("contact-container");
+        toggleQuestion(container, failure);
+      });
 
     setFormState((formState) => ({
       ...formState,
@@ -317,16 +322,22 @@ function Contact() {
             </Grid>
           </form>
         </div>
-        <p id="success-message" className="call-out contact-text hide-question">
+        <p
+          id="success-message"
+          className="call-out contact-text green-text hide-question"
+        >
           Thank you reaching out to us, we'll get back to you as soon as we get
           your message.
           <br />
           While you wait, take a look at some of our work{" "}
-          <span>
-            <Link to="/gallery">/here/</Link>
+          <span className="underline">
+            <Link to="/gallery">here</Link>
           </span>
         </p>
-        <p id="failure-message" className="call-out contact-text hide-question">
+        <p
+          id="failure-message"
+          className="call-out contact-text red-text hide-question"
+        >
           Something went wrong, Please refresh the page and try again.
         </p>
       </div>
