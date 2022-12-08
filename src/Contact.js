@@ -216,7 +216,7 @@ function Contact() {
 
               <Grid item xs={12} className="hide-question question" id="q2">
                 <p className="call-out contact-text">
-                  An email we may get back to you on ?
+                  Kindly give us an email we could use to contact you
                 </p>
                 <TextField
                   variant="outlined"
@@ -326,8 +326,8 @@ function Contact() {
           id="success-message"
           className="call-out contact-text green-text hide-question"
         >
-          Thank you reaching out to us, we'll get back to you as soon as we get
-          your message.
+          Thank you for reaching out to us, we'll get back to you as soon as we
+          get your message.
           <br />
           While you wait, take a look at some of our work{" "}
           <span className="underline">
