@@ -5,7 +5,7 @@ function Pfooter() {
     <footer className="pages-footer">
       <Link to="/contact">
         <div className="contact-us">
-          <p>Get a Quote Now!</p>
+          <p>Reach out</p>
         </div>
       </Link>
     </footer>

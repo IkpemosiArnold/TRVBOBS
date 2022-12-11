@@ -1,4 +1,4 @@
-import Homepage from "./Homepage";
+import Menu from "./Menu";
 import About from "./About";
 import Gallery from "./Gallery";
 import Services from "./Services";
@@ -13,8 +13,8 @@ function App() {
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/" element={<About />} />
+        <Route path="/menu" element={<Menu />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/services" element={<Services />} />
         <Route path="/team" element={<Team />} />

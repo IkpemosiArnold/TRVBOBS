@@ -169,16 +169,19 @@ function Contact() {
                   },
                 }}
               >
-                <Typography variant="h5" align="center">
-                  <strong>
-                    Hi there. TheRadar would love to know more about you.
-                  </strong>
+                <Typography
+                  variant="h5"
+                  align="center"
+                  className="green-text uppercase"
+                >
+                  <strong>Hi there! We'd love to help.</strong>
                 </Typography>
               </Grid>
               <Grid item xs={12} id="q1">
                 <p className="call-out contact-text">What's your name ?</p>
 
                 <TextField
+                  placeholder="ENTER YOUR NAME"
                   variant="standard"
                   size="medium"
                   name="name"
@@ -199,7 +202,6 @@ function Contact() {
                     },
                     ".MuiInputBase-root": {
                       backgroundColor: "transparent",
-                      borderBottom: "0.5px solid white",
                       color: "white",
                     },
                     ".MuiInputBase-input": {
@@ -219,6 +221,7 @@ function Contact() {
                   Kindly give us an email we could use to contact you
                 </p>
                 <TextField
+                  placeholder="ENTER YOUR EMAIL"
                   variant="outlined"
                   size="medium"
                   name="email"
@@ -238,7 +241,6 @@ function Contact() {
                     },
                     ".MuiInputBase-root": {
                       backgroundColor: "transparent",
-                      borderBottom: "0.5px solid white",
                       color: "white",
                     },
                     ".MuiInputBase-input": {
@@ -261,6 +263,7 @@ function Contact() {
                   to help you?
                 </p>
                 <TextField
+                  placeholder="ENTER YOUR MESSAGE"
                   variant="outlined"
                   size="medium"
                   name="message"
@@ -282,7 +285,6 @@ function Contact() {
                     },
                     ".MuiInputBase-root": {
                       backgroundColor: "transparent",
-                      borderBottom: "0.5px solid white",
                       color: "white",
                     },
                     ".MuiInputBase-input": {

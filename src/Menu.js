@@ -6,11 +6,28 @@ import { gsap } from "gsap";
 import { motion } from "framer-motion";
 import "./style.css";
 
-function Homepage() {
+function Menu() {
   const el = useRef();
   const tl = useRef();
 
   useEffect(() => {
+    let menudiv = document.getElementById("home-menu");
+
+    menudiv.addEventListener("click", function (e) {
+      var pulse = document.createElement("div");
+      pulse.classList.add("pulse");
+      pulse.style.top = e.pageY + "px";
+      pulse.style.left = e.pageX + "px";
+      menudiv.appendChild(pulse);
+    });
+
+    menudiv.addEventListener("touchstart", function (e) {
+      var pulse = document.createElement("div");
+      pulse.classList.add("pulse");
+      pulse.style.top = e.pageY + "px";
+      pulse.style.left = e.pageX + "px";
+      menudiv.appendChild(pulse);
+    });
     const ctx = gsap.context(() => {
       tl.current = gsap.timeline({ repeat: -1 }).to(".starry-bg", {
         backgroundPosition: "-600px 0px",
@@ -39,4 +56,4 @@ function Homepage() {
   );
 }
 
-export default Homepage;
+export default Menu;

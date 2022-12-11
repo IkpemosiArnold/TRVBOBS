@@ -22,7 +22,7 @@ function Pnavbar() {
     <nav className="nav sticky-header">
       <img alt="instagram-logo" src={ig} className="ig-logo" />
       <div className="go-back" ref={el}>
-        <Link to="/">
+        <Link to="/menu">
           <img alt="nav-logo" src={navLogo} className="nav-logo" />
         </Link>
       </div>
