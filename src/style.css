@@ -41,7 +41,7 @@ body {
   width: 100vw;
 }
 #enter-button {
-  color: #42ff00;
+  color: #0aa21a;
   font-size: clamp(24px, 1rem + 2.8vw, 128px);
   font-family: "Orbitron", sans-serif;
   font-weight: 900;
@@ -311,7 +311,7 @@ a {
   }
 }
 .green-text {
-  color: #42ff00;
+  color: #0aa21a;
 }
 .text-center {
   text-align: center;
@@ -378,7 +378,7 @@ a {
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: auto;
-  background: #42ff00;
+  background: #0aa21a;
   padding: 5px;
   text-align: center;
   color: #000;
@@ -395,33 +395,49 @@ a {
   flex-direction: column;
   min-height: 100vh;
 }
-#image-box {
-  width: 25vw;
-  height: 80vh;
-  object-fit: cover;
-  object-position: 50% 50%;
-}
 .gallery-center {
-  display: flex;
-  width: 100vw;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  padding-top: 20vh;
-  color: #ffffff;
-}
-.image-boxes {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
+  flex-basis: 25%;
+  min-height: 100vh;
+  color: #ffffff;
 }
-#beam-base {
-  width: calc(100vw / 4 + 100px);
-  height: auto;
-  transform-style: preserve-3d;
-  margin-top: 20px;
+.gallery-header {
+  margin-right: -24px;
+  z-index: 12;
+}
+.image-box {
+  width: 24vw;
+  height: 76vh;
+  margin-top: 20vh;
+  background-color: #f08585;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.project-box {
+  width: 72vw;
+  height: 76vh;
+  margin-top: 20vh;
+  background-color: #f08585;
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: right;
+}
+#ll-1,
+#ll-2,
+#client-review,
+#project-name {
+  opacity: 0;
+  transition: ease-in 1s;
+}
+.live-link {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .next-box {
@@ -440,6 +456,9 @@ a {
 }
 #servicebody {
   overflow: hidden;
+}
+.small-section {
+  max-width: 44ch;
 }
 
 .contact-us {
@@ -539,9 +558,7 @@ a {
   padding-left: 5vw;
   padding-right: 5vw;
 }
-.hide-question {
-  display: none;
-}
+
 .question {
   transition: 0.5s ease;
 }
@@ -555,6 +572,12 @@ a {
 }
 .red-text {
   color: #f08585;
+}
+.hide-question {
+  display: none;
+}
+.hide-box {
+  display: none;
 }
 /*--------------MEDIA QUERIES ---------------*/
 @media (max-width: 540px) {
