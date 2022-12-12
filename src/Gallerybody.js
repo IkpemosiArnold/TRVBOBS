@@ -20,7 +20,7 @@ function Gallerybody() {
     let clientreview = document.getElementById("client-review");
     let projectname = document.getElementById("project-name");
 
-    /*  projectscontainer.addEventListener("click", () => {
+    projectscontainer.addEventListener("click", () => {
       let projects = document.getElementsByClassName("project-box");
       let imgboxs = document.getElementsByClassName("image-box");
       for (const project of projects) {
@@ -30,7 +30,7 @@ function Gallerybody() {
         box.style.display = "inline-flex";
       }
     });
-*/
+
     project1.addEventListener("mouseenter", () => {
       project1.style.opacity = 0.8;
       ll1.style.opacity = 1;
