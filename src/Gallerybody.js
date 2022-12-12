@@ -11,6 +11,7 @@ function toggleClass(element) {
 }
 
 function Gallerybody() {
+  const [open, setOpen] = useState(false);
   useEffect(() => {
     let projectscontainer = document.getElementById("projects-container");
     let imgbox1 = document.getElementById("img-box-1");
@@ -44,6 +45,30 @@ function Gallerybody() {
       project1.style.opacity = 1;
     });
   }, []);
+  
+  
+  
+  /** New code I wrote starts here... try this and let's see if it works */
+  const handleStateChange = () => {
+    setOpen(true);
+  }
+  
+  const toggler = (open) => {
+    const div = document.querySelector(".image-box");
+
+     // check if open is true then change class here
+    if(open){
+      div.classList.add("class to hide");
+    }else{
+      div.classList.remove("class to hide");
+    }
+     
+  }
+  
+  useEffect(()=>{
+    toggler(open);
+  }, [open])
+  
   return (
     <>
       <div id="projects-container" className="gallery-center">
@@ -52,8 +77,10 @@ function Gallerybody() {
           <p id="project-name" className="uppercase"></p>
           <p id="client-review"></p>
         </div>
+        {/** this div can actually have event listeners on them and they can call a function*/}
         <div
           id="img-box-1"
+          onClick={handleStateChange}
           className="image-box"
           style={{
             backgroundImage: `url(${imgArray[0]})`,
