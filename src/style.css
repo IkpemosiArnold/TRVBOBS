@@ -632,6 +632,10 @@ a {
     height: 50vh;
     margin-top: 10vh;
   }
+  .clientname {
+    padding: 0;
+    font-size: 16px;
+  }
   #ll-1,
   #ll-2,
   #client-review {
