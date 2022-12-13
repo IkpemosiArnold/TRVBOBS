@@ -456,6 +456,20 @@ a {
 #servicebody {
   overflow: hidden;
 }
+
+.align-right {
+  min-width: 100vw;
+  display: inline-flex;
+  justify-content: right;
+  text-align: right;
+  padding-right: 8%;
+}
+.align-left {
+  min-width: 100vw;
+  display: inline-flex;
+  justify-content: left;
+  text-align: left;
+}
 .small-section {
   max-width: 44ch;
 }

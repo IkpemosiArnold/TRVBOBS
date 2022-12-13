@@ -65,8 +65,9 @@ function Servicebody() {
     <div className="service-body">
       <div id="sv-1" className="big-body-text sv-slide">
         <p className="">
-          Let's help upgrade your business until customers can't help but
-          notice.
+          Are you ready to take your business to the next level?
+          <br />
+          We can help!
         </p>
         <p id="sv-next-1" className="sv-next green-text text-right">
           {">"}
@@ -95,15 +96,18 @@ function Servicebody() {
         </p>
       </div>
       <div id="sv-4" className="big-body-text sv-slide hide-question">
-        <p>
+        <p className="green-text">
           Our website development services provide your businesses with
           beautiful online presence they can be proud of.
         </p>
-        <p className="text-right">
-          We offer custom designs that are tailored to your business, and our
-          team of experienced professionals ensures that your website is
-          user-friendly, engaging, and optimized for search engines.
-        </p>
+        <div className="align-right">
+          <p className="small-section">
+            We offer custom designs that are tailored to your business, and our
+            team of experienced professionals ensures that your website is
+            user-friendly, engaging, and optimized for search engines.
+          </p>
+        </div>
+
         <p id="sv-next-4" className="sv-next green-text text-right">
           {">"}
         </p>
@@ -112,46 +116,53 @@ function Servicebody() {
         id="sv-5"
         className="big-body-text sv-slide text-right hide-question"
       >
-        <p>
+        <p className="green-text">
           Web application development services help you automate and streamline
           your processes, saving time, energy, and money.
         </p>
-        <p className="text-right">
-          With <span className="green-text">TheRadar</span>, you can create
-          custom web applications that meet your unique business needs, and our
-          team provides ongoing support and maintenance to ensure that your
-          applications are always running smoothly.
-        </p>
+        <div className="align-right">
+          <p className="small-section">
+            With <span className="green-text">TheRadar</span>, you can create
+            custom web applications that meet your unique business needs, and
+            our team provides ongoing support and maintenance to ensure that
+            your applications are always running smoothly.
+          </p>
+        </div>
         <p id="sv-next-5" className="sv-next green-text text-right">
           {">"}
         </p>
       </div>
       <div id="sv-6" className="big-body-text sv-slide hide-question">
-        <p>
+        <p className="green-text">
           Mobile app development services to help you reach more customers and
           provide them with a seamless user experience on the go.
         </p>
-        <p className="">
-          We offer custom designs and features that are tailored to your
-          business, and our team ensures that your mobile app is user-friendly,
-          engaging, and optimized for all devices.
-        </p>
+        <div className="align-left">
+          <p className="small-section">
+            We offer custom designs and features that are tailored to your
+            business, and our team ensures that your mobile app is
+            user-friendly, engaging, and optimized for all devices.
+          </p>
+        </div>
         <p id="sv-next-6" className="sv-next green-text text-right">
           {">"}
         </p>
       </div>
       <div id="sv-7" className="big-body-text sv-slide hide-question">
-        <p className="text-right">
+        <p className="text-right green-text">
           Whether you need help with branding, security, or anything in between,
-          <br />
-          <span className="green-text">TheRadar</span> has you covered.
-          <br />
         </p>
-        <p className="">
-          In addition to our core services, we also offer a range of support
-          services, including graphics design and branding, application security
-          consultation, and discovery enhancement services.
+        <p className="text-right">
+          <span className=" green-text">TheRadar</span> has you covered.
         </p>
+
+        <div className="align-left">
+          <p className="small-section">
+            In addition to our core services, we also offer a range of support
+            services, including graphics design and branding, application
+            security consultation, and discovery enhancement services.
+          </p>
+        </div>
         <p id="sv-next-7" className="sv-next green-text text-right">
           {">"}
         </p>
