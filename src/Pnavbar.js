@@ -1,23 +1,14 @@
 import "./style.css";
 import navLogo from "./nav-logo.png";
 import ig from "./instagram.svg";
+import emailicon from "./emailicon.svg";
 import { Link } from "react-router-dom";
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 function Pnavbar() {
   const el = useRef();
   const tl = useRef();
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      tl.current = gsap.timeline({ repeat: -1 }).to(".nav-logo", {
-        x: 0,
-        y: 0,
-        rotation: 360,
-        duration: 20,
-        ease: "Linear.easeNone",
-      });
-    }, el);
-  });
+
   return (
     <nav className="nav sticky-header">
       <img alt="instagram-logo" src={ig} className="ig-logo" />
@@ -27,7 +18,7 @@ function Pnavbar() {
         </Link>
       </div>
       <Link to="/contact">
-        <p className="contact-btn">Contact us</p>
+        <img alt="email icon" src={emailicon} className="ig-logo" />
       </Link>
     </nav>
   );

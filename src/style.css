@@ -413,7 +413,7 @@ a {
   width: 24vw;
   height: 76vh;
   margin-top: 20vh;
-  background-color: #f08585;
+  background-color: transparent;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -423,15 +423,14 @@ a {
   width: 72vw;
   height: 76vh;
   margin-top: 20vh;
-  background-color: #f08585;
+  background-color: transparent;
   display: inline-flex;
   align-items: flex-end;
   justify-content: right;
 }
 #ll-1,
 #ll-2,
-#client-review,
-#project-name {
+#client-review {
   opacity: 0;
   transition: ease-in 1s;
 }
@@ -589,12 +588,38 @@ a {
   }
 }
 @media (max-width: 768px) {
+  .hide-box {
+    display: none;
+  }
   .big-body-text,
   .body-text {
     font-size: clamp(16px, 1rem + 0.2vw, 32px);
   }
   .call-out {
     padding-top: 10%;
+  }
+  .gallery-center {
+    flex-direction: column-reverse;
+
+    padding-top: 20vh;
+  }
+  .gallery-header {
+    text-align: right;
+  }
+  .image-box {
+    width: 80vw;
+    height: 20vh;
+    margin: 0;
+  }
+  .project-box {
+    width: 80;
+    height: 50vh;
+    margin-top: 10vh;
+  }
+  #ll-1,
+  #ll-2,
+  #client-review {
+    opacity: 1;
   }
 }
 @media (max-height: 1026px) {

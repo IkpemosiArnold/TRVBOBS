@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { Typography, Grid, Button, TextField } from "@mui/material";
 import emailjs from "emailjs-com";
 import validate from "validate.js";
+import radarSvg from "./The_Radar_main_white_notext.svg";
 const PUBLIC_KEY = "_O76ZlQ0wx24Gvbh9";
 const TEMPLATE_ID = "template_x1cmt9p";
 const SERVICE_ID = "service_fj3fk8k";
@@ -106,6 +107,22 @@ function Contact() {
   const el = useRef();
   const tl = useRef();
   useEffect(() => {
+    let tl = gsap.timeline();
+    tl.to(".logo-bg", {
+      x: "100vw",
+      duration: 20,
+      repeat: -1,
+      yoyo: true,
+    });
+    let tk = gsap.timeline();
+    tk.to(".logo-bg", {
+      rotation: 360,
+      duration: 20,
+      transformOrigin: "center",
+      repeat: -1,
+      ease: "Linear.easeNone",
+      yoyo: true,
+    });
     let q1 = document.getElementById("q1");
     let q2 = document.getElementById("q2");
     let q3 = document.getElementById("q3");
@@ -132,14 +149,6 @@ function Contact() {
       e.preventDefault();
       toggleQuestion(q3, q2);
     });
-
-    const ctx = gsap.context(() => {
-      tl.current = gsap.timeline({ repeat: -1 }).to(".starry-bg", {
-        backgroundPosition: "-600px 0px",
-        ease: "Linear.easeNone",
-        duration: 50,
-      });
-    }, el);
   }, []); //
   return (
     <motion.div
@@ -151,7 +160,10 @@ function Contact() {
       exit={{ opacity: 0 }}
       transition={{ duration: 1, type: "tween", ease: "linear" }}
     >
-      <div id="contact" className="starry-bg">
+      <div id="contact">
+        <div id="logo-canvas">
+          <img className="logo-bg" src={radarSvg} alt="TheRadar Logo" />
+        </div>
         <Pnavbar />
         <div className="contact-form" id="contact-container">
           <form

@@ -68,9 +68,9 @@ function Homemain() {
           </div>
 
           <div className="tt-link">
-            <Link to="/team">
+            <Link to="/contact">
               <div className="menu-link">
-                <p>The team</p>
+                <p>Contact us</p>
                 <div className="circle"></div>
               </div>
             </Link>
