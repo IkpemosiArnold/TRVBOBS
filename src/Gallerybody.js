@@ -183,7 +183,9 @@ function Gallerybody() {
           }}
         >
           <p id="ll-1" className="uppercase live-link">
-            Visit Site
+            <a href="https://www.valafilms.com" target={"_blank"}>
+              Visit Site
+            </a>
           </p>
         </div>
         <div

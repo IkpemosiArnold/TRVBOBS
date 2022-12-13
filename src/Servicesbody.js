@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import arrow from "./arrow-right.svg";
 import { Link } from "react-router-dom";
 
 function toggleNext(hideQuestion, showQuestion) {
@@ -69,9 +70,11 @@ function Servicebody() {
           <br />
           We can help!
         </p>
-        <p id="sv-next-1" className="sv-next green-text text-right">
-          {">"}
-        </p>
+        <img
+          id="sv-next-1"
+          className="sv-next green-text text-right"
+          src={arrow}
+        />
       </div>
 
       <div
@@ -79,9 +82,11 @@ function Servicebody() {
         className="big-body-text sv-slide text-right hide-question"
       >
         <p className="green-text">How?</p>
-        <p id="sv-next-2" className="sv-next green-text text-right">
-          {">"}
-        </p>
+        <img
+          id="sv-next-2"
+          className="sv-next green-text text-right"
+          src={arrow}
+        />
       </div>
       <div
         id="sv-3"
@@ -91,9 +96,11 @@ function Servicebody() {
           We offer a suite of services designed to deliver undeniable
           improvement for our customers.
         </p>
-        <p id="sv-next-3" className="sv-next green-text text-right">
-          {">"}
-        </p>
+        <img
+          id="sv-next-3"
+          className="sv-next green-text text-right"
+          src={arrow}
+        />
       </div>
       <div id="sv-4" className="big-body-text sv-slide hide-question">
         <p className="green-text">
@@ -108,9 +115,11 @@ function Servicebody() {
           </p>
         </div>
 
-        <p id="sv-next-4" className="sv-next green-text text-right">
-          {">"}
-        </p>
+        <img
+          id="sv-next-4"
+          className="sv-next green-text text-right"
+          src={arrow}
+        />
       </div>
       <div
         id="sv-5"
@@ -128,9 +137,11 @@ function Servicebody() {
             your applications are always running smoothly.
           </p>
         </div>
-        <p id="sv-next-5" className="sv-next green-text text-right">
-          {">"}
-        </p>
+        <img
+          id="sv-next-5"
+          className="sv-next green-text text-right"
+          src={arrow}
+        />
       </div>
       <div id="sv-6" className="big-body-text sv-slide hide-question">
         <p className="green-text">
@@ -144,9 +155,11 @@ function Servicebody() {
             user-friendly, engaging, and optimized for all devices.
           </p>
         </div>
-        <p id="sv-next-6" className="sv-next green-text text-right">
-          {">"}
-        </p>
+        <img
+          id="sv-next-6"
+          className="sv-next green-text text-right"
+          src={arrow}
+        />
       </div>
       <div id="sv-7" className="big-body-text sv-slide hide-question">
         <p className="text-right green-text">
@@ -163,9 +176,11 @@ function Servicebody() {
             security consultation, and discovery enhancement services.
           </p>
         </div>
-        <p id="sv-next-7" className="sv-next green-text text-right">
-          {">"}
-        </p>
+        <img
+          id="sv-next-7"
+          className="sv-next green-text text-right"
+          src={arrow}
+        />
       </div>
       <div id="sv-8" className="big-body-text sv-slide hide-question">
         <ul className="services-list">
