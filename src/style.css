@@ -330,7 +330,7 @@ a {
 }
 /*---------ABOUT US PAGE---------*/
 .big-body-text {
-  font-weight: 500;
+  font-weight: 300;
   font-size: clamp(24px, 1rem + 1.5vw, 128px);
   color: #ffffff;
   padding: 20px;
@@ -473,7 +473,10 @@ a {
 .small-section {
   max-width: 44ch;
 }
-
+.clientname {
+  padding-top: 20vh;
+  font-size: larger;
+}
 .contact-us {
   font-size: clamp(16px, 1rem + 0.5vw, 80px);
   text-transform: uppercase;

@@ -153,7 +153,7 @@ function Gallerybody() {
             backgroundSize: "cover",
           }}
         >
-          <p className="clientname green-text">Vala Films</p>
+          <p className="clientname uppercase">ValaFilms</p>
         </div>
 
         <div
@@ -166,11 +166,11 @@ function Gallerybody() {
             backgroundSize: "cover",
           }}
         >
-          <p className="clientname green-text">TheRadar</p>
+          <p className="clientname uppercase">TheRadar</p>
         </div>
         <Link to="/contact">
           <div className="image-box">
-            <p className="clientname">Add your project here</p>
+            <p className="clientname uppercase">Add your project here</p>
           </div>
         </Link>
         <div
