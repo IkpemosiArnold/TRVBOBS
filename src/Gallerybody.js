@@ -36,25 +36,25 @@ function Gallerybody() {
     });*/
 
     project1.addEventListener("mouseenter", () => {
-      project1.style.opacity = 0.8;
       ll1.style.opacity = 1;
       clientreview.style.opacity = 1;
+      project1.style.backgroundBlendMode = "normal";
     });
     project1.addEventListener("mouseleave", () => {
       ll1.style.opacity = 0;
       clientreview.style.opacity = 0;
-      project1.style.opacity = 1;
+      project1.style.backgroundBlendMode = "multiply";
     });
 
     project2.addEventListener("mouseenter", () => {
-      project2.style.opacity = 0.8;
+      project2.style.backgroundBlendMode = "normal";
       ll2.style.opacity = 1;
       clientreview.style.opacity = 1;
     });
     project2.addEventListener("mouseleave", () => {
       ll2.style.opacity = 0;
       clientreview.style.opacity = 0;
-      project2.style.opacity = 1;
+      project2.style.backgroundBlendMode = "multiply";
     });
   }, []);
 
@@ -142,7 +142,7 @@ function Gallerybody() {
           <p id="project-name" className="uppercase"></p>
           <p id="client-review"></p>
         </div>
-        {/** this div can actually have event listeners on them and they can call a function*/}
+
         <div
           id="img-box-1"
           onClick={handleStateChange}
@@ -180,6 +180,8 @@ function Gallerybody() {
             backgroundImage: `url(${client1m})`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
+            backgroundColor: "grey",
+            backgroundBlendMode: "multiply",
           }}
         >
           <p id="ll-1" className="uppercase live-link">
@@ -195,6 +197,8 @@ function Gallerybody() {
             backgroundImage: `url(${client2})`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
+            backgroundColor: "grey",
+            backgroundBlendMode: "multiply",
           }}
         >
           <p id="ll-2" className="uppercase live-link">

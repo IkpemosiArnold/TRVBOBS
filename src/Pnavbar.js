@@ -14,10 +14,6 @@ function Pnavbar() {
         </Link>
       </div>
       <img alt="instagram-logo" src={ig} className="ig-logo" />
-
-      <Link to="/contact">
-        <img alt="email icon" src={emailicon} className="ig-logo" />
-      </Link>
     </nav>
   );
 }
