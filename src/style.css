@@ -640,7 +640,8 @@ a {
   }
 }
 @media (min-width: 767px) {
-  .sv-slide {
+  .sv-slide,
+  .body-center {
     padding-left: 4vw;
     padding-right: 4vw;
   }
