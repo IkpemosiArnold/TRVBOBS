@@ -639,5 +639,9 @@ a {
     opacity: 1;
   }
 }
-@media (max-height: 1026px) {
+@media (min-width: 767px) {
+  .sv-slide {
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
 }
