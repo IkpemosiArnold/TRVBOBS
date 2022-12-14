@@ -180,7 +180,7 @@ function Gallerybody() {
             backgroundImage: `url(${client1m})`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
-            backgroundColor: "grey",
+            backgroundColor: "#221e22",
             backgroundBlendMode: "multiply",
           }}
         >
@@ -197,7 +197,7 @@ function Gallerybody() {
             backgroundImage: `url(${client2})`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
-            backgroundColor: "grey",
+            backgroundColor: "#221e22",
             backgroundBlendMode: "multiply",
           }}
         >

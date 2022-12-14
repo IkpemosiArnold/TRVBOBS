@@ -239,7 +239,7 @@ a {
 
 /*------------CIRCLE ANIMATION-------------*/
 .circle {
-  background: #42ff00;
+  background: #73e092;
   border-radius: 100%;
   align-self: center;
   justify-self: center;
@@ -426,6 +426,7 @@ a {
   display: inline-flex;
   align-items: flex-end;
   justify-content: right;
+  border: 0.5px solid #73e092;
 }
 #ll-1,
 #ll-2,
