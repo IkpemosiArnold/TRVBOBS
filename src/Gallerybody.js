@@ -4,8 +4,25 @@ import client1 from "./client1.png";
 import client1m from "./client1-1.png";
 import client2 from "./client2.png";
 import { gsap } from "gsap";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-let imgArray = [client1, client2];
+const settings = {
+  accessibility: true,
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  speed: 4000,
+  arrows: false,
+  pauseOnHover: true,
+  swipeToSlide: true,
+  Draggable: true,
+};
+
+let c1Array = [client1, client1m];
+let c2Array = [client2];
+let i = 0;
 
 function toggleClass(element) {
   element.classList.add("hide-question");
@@ -15,106 +32,35 @@ function Gallerybody() {
   const [open, setOpen] = useState(false);
   const [zoom, setZoom] = useState(false);
   const [zoomer, setZoomer] = useState(false);
-  useEffect(() => {
-    let projectscontainer = document.getElementById("projects-container");
-    let project1 = document.getElementById("project-one");
-    let project2 = document.getElementById("project-two");
-    let ll1 = document.getElementById("ll-1");
-    let ll2 = document.getElementById("ll-2");
-    let clientreview = document.getElementById("client-review");
-    let projectname = document.getElementById("project-name");
+  useEffect(() => {}, []);
 
-    /* projectscontainer.addEventListener("click", () => {
-      let projects = document.getElementsByClassName("project-box");
-      let imgboxs = document.getElementsByClassName("image-box");
-      for (const project of projects) {
-        project.style.display = "none";
-      }
-      for (const box of imgboxs) {
-        box.style.display = "inline-flex";
-      }
-    });*/
-
-    project1.addEventListener("mouseenter", () => {
-      ll1.style.opacity = 1;
-      clientreview.style.opacity = 1;
-      project1.style.backgroundBlendMode = "normal";
-    });
-    project1.addEventListener("mouseleave", () => {
-      ll1.style.opacity = 0;
-      clientreview.style.opacity = 0;
-      project1.style.backgroundBlendMode = "multiply";
-    });
-
-    project2.addEventListener("mouseenter", () => {
-      project2.style.backgroundBlendMode = "normal";
-      ll2.style.opacity = 1;
-      clientreview.style.opacity = 1;
-    });
-    project2.addEventListener("mouseleave", () => {
-      ll2.style.opacity = 0;
-      clientreview.style.opacity = 0;
-      project2.style.backgroundBlendMode = "multiply";
-    });
-  }, []);
-
-  /** New code I wrote starts here... try this and let's see if it works */
-  const handleStateChange = (event) => {
-    let clientreview = document.getElementById("client-review");
-    let projectname = document.getElementById("project-name");
-    if (event.currentTarget.classList.contains("image-box")) {
-      setOpen(true);
-      if (event.currentTarget.id == "img-box-1") {
-        projectname.innerText = "ValaFilms";
-        clientreview.innerText = "Loved every bit of it - Chav";
-        setZoom(true);
-      }
-      if (event.currentTarget.id == "img-box-2") {
-        projectname.innerText = "TheRadar";
-        clientreview.innerText = "Good work.";
-        setZoomer(true);
-      }
+  const handleStateChange = () => {
+    let c1 = document.getElementById("c1");
+    i++;
+    if (i < c1Array.length) {
+      c1.src = c1Array[i];
     } else {
-      setOpen(false);
-      setZoom(false);
-      setZoomer(false);
-      projectname.innerText = "";
-      clientreview.innerText = "";
+      c1.src = c1Array[0];
+      i = 0;
+      console.log(c1Array);
     }
   };
 
   const toggler = (open) => {
-    const boxes = document.querySelectorAll(".image-box");
-
     // check if open is true then change class here
     if (open) {
-      for (const box of boxes) {
-        box.classList.add("hide-box");
-      }
-    } else {
-      for (const box of boxes) {
-        box.classList.remove("hide-box");
-      }
     }
   };
   const opener = (zoom) => {
-    const project1 = document.querySelectorAll(".project-box")[0];
-
     // check if open is true then change class here
     if (zoom) {
-      project1.classList.remove("hide-box");
     } else {
-      project1.classList.add("hide-box");
     }
   };
   const looker = (zoomer) => {
-    const project2 = document.querySelectorAll(".project-box")[1];
-
     // check if open is true then change class here
     if (zoomer) {
-      project2.classList.remove("hide-box");
     } else {
-      project2.classList.add("hide-box");
     }
   };
 
@@ -132,80 +78,49 @@ function Gallerybody() {
 
   return (
     <>
-      <div
-        id="projects-container"
-        onClickCapture={handleStateChange}
-        className="gallery-center"
-      >
-        <div className="gallery-header">
-          <h1>Projects</h1>
-          <p id="project-name" className="uppercase"></p>
-          <p id="client-review"></p>
-        </div>
-
-        <div
-          id="img-box-1"
-          onClick={handleStateChange}
-          className="image-box"
-          style={{
-            backgroundImage: `url(${imgArray[0]})`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-          }}
-        >
-          <p className="clientname uppercase">ValaFilms</p>
-        </div>
-
-        <div
-          id="img-box-2"
-          onClick={handleStateChange}
-          className="image-box"
-          style={{
-            backgroundImage: `url(${imgArray[1]})`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-          }}
-        >
-          <p className="clientname uppercase">TheRadar</p>
-        </div>
-        <Link to="/contact">
-          <div className="image-box">
-            <p className="clientname uppercase">Add your project here</p>
-          </div>
-        </Link>
+      <Slider {...settings} className="img-slider">
         <div
           id="project-one"
           className="project-box"
-          style={{
-            backgroundImage: `url(${client1m})`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-            backgroundColor: "#221e22",
-            backgroundBlendMode: "multiply",
-          }}
+          onClick={handleStateChange}
         >
+          <img
+            id="c1"
+            className="client-img"
+            alt="project-screengrabs"
+            src={c1Array[i]}
+          />
           <p id="ll-1" className="uppercase live-link">
-            <a href="https://www.valafilms.com" target={"_blank"}>
+            <a
+              href="https://www.valafilms.com"
+              target={"_blank"}
+              rel="noreferrer"
+            >
               Visit Site
             </a>
           </p>
         </div>
-        <div
-          id="project-two"
-          className="project-box"
-          style={{
-            backgroundImage: `url(${client2})`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-            backgroundColor: "#221e22",
-            backgroundBlendMode: "multiply",
-          }}
-        >
-          <p id="ll-2" className="uppercase live-link">
-            Visit Site
+        <div id="project-two" className="project-box">
+          <img
+            id="c2"
+            className="client-img"
+            alt="project-screengrabs"
+            src={client2}
+          />
+          <p id="ll-1" className="uppercase live-link">
+            <a
+              href="https://www.valafilms.com"
+              target={"_blank"}
+              rel="noreferrer"
+            >
+              Visit Site
+            </a>
           </p>
         </div>
-      </div>
+        <div id="project-three" className="project-box">
+          <h3>Add your Project here</h3>
+        </div>
+      </Slider>
     </>
   );
 }

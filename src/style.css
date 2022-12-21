@@ -409,38 +409,32 @@ a {
   margin-right: -24px;
   z-index: 12;
 }
-.image-box {
-  width: 24vw;
-  height: 76vh;
-  margin-top: 20vh;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
+
 .project-box {
-  width: 72vw;
-  height: 76vh;
+  height: 68vh;
   margin-top: 20vh;
-  background-color: transparent;
-  display: inline-flex;
-  align-items: flex-end;
-  justify-content: right;
-  border: 0.5px solid #73e092;
+  text-align: center;
+  color: #ffffff;
 }
-#ll-1,
-#ll-2,
-#client-review {
-  opacity: 0;
-  transition: ease-in 1s;
+.client-img {
+  width: 72vw;
+  height: 68vh;
+  object-fit: cover;
+  object-position: center center;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 .live-link {
   text-decoration: underline;
   cursor: pointer;
 }
-
-.next-box {
-  transform: translate3d(200vw, 0px, 0px);
+.p-numbers {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 24px;
 }
 
 /*--------------SERVICES SECTION ----------------*/
