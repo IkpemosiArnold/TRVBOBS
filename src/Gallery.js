@@ -9,21 +9,22 @@ function Gallery() {
   const el = useRef();
   const tl = useRef();
   useEffect(() => {
-    let tl = gsap.timeline();
-    tl.to(".logo-bg", {
-      x: "100vw",
-      duration: 20,
-      repeat: -1,
-      yoyo: true,
+    let gallery = document.getElementById("gallery");
+
+    gallery.addEventListener("click", function (e) {
+      var pulse = document.createElement("div");
+      pulse.classList.add("pulse");
+      pulse.style.top = e.pageY + "px";
+      pulse.style.left = e.pageX + "px";
+      gallery.appendChild(pulse);
     });
-    let tk = gsap.timeline();
-    tk.to(".logo-bg", {
-      rotation: 360,
-      duration: 20,
-      transformOrigin: "center",
-      repeat: -1,
-      ease: "Linear.easeNone",
-      yoyo: true,
+
+    gallery.addEventListener("touchstart", function (e) {
+      var pulse = document.createElement("div");
+      pulse.classList.add("pulse");
+      pulse.style.top = e.pageY + "px";
+      pulse.style.left = e.pageX + "px";
+      gallery.appendChild(pulse);
     });
   }, []); //
   return (
@@ -37,9 +38,6 @@ function Gallery() {
       transition={{ duration: 1, type: "tween", ease: "linear" }}
     >
       <div id="gallery">
-        <div id="logo-canvas">
-          <img className="logo-bg" src={radarSvg} alt="TheRadar Logo" />
-        </div>
         <Pnavbar />
         <Gallerybody />
       </div>

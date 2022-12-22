@@ -316,9 +316,6 @@ a {
 .text-center {
   text-align: center;
 }
-.text-center {
-  text-align: center;
-}
 .text-right {
   text-align: right;
 }
@@ -411,23 +408,54 @@ a {
 }
 
 .project-box {
-  height: 68vh;
+  height: 60vh;
   margin-top: 20vh;
   text-align: center;
   color: #ffffff;
 }
 .client-img {
-  width: 72vw;
-  height: 68vh;
+  width: 68vw;
+  height: 60vh;
   object-fit: cover;
   object-position: center center;
   margin-left: auto;
   margin-right: auto;
+  transition: 0.5s ease-in-out;
 }
 
 .live-link {
   text-decoration: underline;
   cursor: pointer;
+  margin-top: -120px;
+}
+.active-imgs {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0 4px 0 0;
+}
+.c1-active,
+.c2-active {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background-color: #3f3a3a;
+  margin: 2px;
+  padding: 0;
+  transition: box-shadow 1s;
+}
+.project-info {
+  width: 300px;
+  color: white;
+  position: relative;
+  top: -44vh;
+  left: 8%;
+  right: 0;
+  text-align: justify;
+  transition: 1s ease-out;
+}
+.project-info > h1 {
+  font-size: clamp(12px, 2vw + 1rem, 64px);
 }
 .p-numbers {
   display: flex;
@@ -614,20 +642,19 @@ a {
   .gallery-header {
     text-align: right;
   }
-  .image-box {
+  .client-img {
     width: 80vw;
-    height: 20vh;
-    margin: 0;
+    height: 60vh;
+    margin-top: 2vh;
   }
   .project-box {
-    width: 80;
-    height: 50vh;
-    margin-top: 10vh;
+    height: 60vh;
   }
   .clientname {
     padding: 0;
     font-size: 16px;
   }
+
   #ll-1,
   #ll-2,
   #client-review {
