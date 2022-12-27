@@ -1,8 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import client1 from "./client1.png";
-import client1m from "./client1-1.png";
-import client2 from "./client2.png";
+import client1_2 from "./client1-1.png";
+import client1_3 from "./C1 (1).png";
+import client1_4 from "./C1 (2).png";
+import client1_5 from "./C1 (3).png";
+import client1_6 from "./C1 (4).png";
+import client1_7 from "./C1 (5).png";
+import client1_8 from "./C1 (6).png";
+import client1_9 from "./C1 (7).png";
 import { gsap } from "gsap";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -20,18 +26,25 @@ const settings = {
   Draggable: true,
 };
 
-let c1Array = [client1, client1m];
-let c2Array = [client2];
+let c1Array = [
+  client1,
+  client1_2,
+  client1_3,
+  client1_4,
+  client1_5,
+  client1_6,
+  client1_7,
+  client1_8,
+  client1_9,
+];
+
 let i = 0;
 
 let itemList = [];
 c1Array.forEach((index) => {
   itemList.push(<li key={index} className="c1-active"></li>);
 });
-let itemList2 = [];
-c2Array.forEach((index) => {
-  itemList2.push(<li key={index} className="c2-active"></li>);
-});
+
 function toggleClass(element) {
   element.classList.add("hide-question");
 }
@@ -43,8 +56,6 @@ function Gallerybody() {
   useEffect(() => {
     let c1acv = document.getElementsByClassName("c1-active");
     c1acv[0].style.backgroundColor = "#fff";
-    let c2acv = document.getElementsByClassName("c2-active");
-    c2acv[0].style.backgroundColor = "#fff";
   }, []);
 
   const handleStateChange = () => {
@@ -104,31 +115,11 @@ function Gallerybody() {
           </p>
           <ul className="active-imgs">{itemList}</ul>
         </div>
-        <div id="project-two" className="project-box">
-          <img
-            id="c2"
-            className="client-img"
-            alt="project-screengrabs"
-            src={client2}
-          />
-          <div className="project-info" id="c2-info">
-            <h1>TheRadar</h1>
-            <h4>Website Design and Development</h4>
+        <Link to="/contact">
+          <div id="project-three" className="project-box">
+            <h3>Add your Project here</h3>
           </div>
-          <p id="ll-1" className="uppercase live-link">
-            <a
-              href="https://www.valafilms.com"
-              target={"_blank"}
-              rel="noreferrer"
-            >
-              Visit Site
-            </a>
-          </p>
-          <ul className="active-imgs">{itemList2}</ul>
-        </div>
-        <div id="project-three" className="project-box">
-          <h3>Add your Project here</h3>
-        </div>
+        </Link>
       </Slider>
     </>
   );
