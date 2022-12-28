@@ -416,8 +416,7 @@ a {
 .client-img {
   width: 68vw;
   height: 60vh;
-  object-fit: cover;
-  object-position: center center;
+  object-fit: contain;
   margin-left: auto;
   margin-right: auto;
   transition: 0.5s ease-in-out;

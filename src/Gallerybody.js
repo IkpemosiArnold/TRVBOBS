@@ -115,11 +115,12 @@ function Gallerybody() {
           </p>
           <ul className="active-imgs">{itemList}</ul>
         </div>
-        <Link to="/contact">
-          <div id="project-three" className="project-box">
+
+        <div id="project-three" className="project-box">
+          <Link to="/contact">
             <h3>Add your Project here</h3>
-          </div>
-        </Link>
+          </Link>
+        </div>
       </Slider>
     </>
   );
