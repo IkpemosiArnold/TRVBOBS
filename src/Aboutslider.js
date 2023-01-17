@@ -57,7 +57,7 @@ const Aboutslider = () => {
             <span className="green-text">Discover how we can help </span>
           </Link>
         </p>
-      </div>😎
+      </div>
     </Slider>
   );
 };
