@@ -99,7 +99,7 @@ function About() {
       transition={{ duration: 1, type: "tween", ease: "linear" }}
     >
       <div className="overlay">
-        <h2 id="enter-button">WELCOME</h2>
+        <h2 id="enter-button">Welcome</h2>
       </div>
       <section id="about-us">
         <div id="logo-canvas">

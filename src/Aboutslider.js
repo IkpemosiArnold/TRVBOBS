@@ -22,36 +22,42 @@ const Aboutslider = () => {
     <Slider {...settings} className="slide-area">
       <div className="big-body-text body-center text-center">
         <p>
-          <span className="green-text">TheRadar?</span>
+          <h3 className="green-text">TheRadar?</h3>
         </p>
       </div>
 
       <div className="big-body-text body-center">
         <p>
-          We are a Digital Transformation agency.
-          <br />
-          We help businesses build amazing applications and experiences online
-          <br />
-          We automate business processes. Who said you can't relax and make
-          money.
+        <span className="green-text">TheRadar</span> is a Digital Transformation agency that specializes in helping businesses  
+        <br />build amazing applications and experiences online, while automating business processes. 
+        <br />This means you can relax and make money while your business grows.
         </p>
       </div>
       <div className="big-body-text body-center">
         <p>
-          <span className="green-text">TheRadar</span> upgrades your business
-          till customers can't help but notice.
+          Let's upgrade your business till customers can't help but comment on the positive changes.
+        </p>
+      </div>
+      <div className="big-body-text body-center">
+        <p>
+          At <span className="green-text">TheRadar</span>, we herald TheFuture of your business by staying ahead of the curve in technology and digital trends.
+          <br />
         </p>
       </div>
       <div className="big-body-text body-center text-right">
         <p>
-          We Herald <span className="green-text">TheFuture</span> of your
-          business.
-          <br />
-          <Link to="/services">
-            <span className="green-text">Learn more about what we do. </span>
-          </Link>
+          And we do it because we like to 😎 
         </p>
       </div>
+      <div className="big-body-text body-center text-right">
+        <p>
+          So don't worry, we're here to chart TheCourse to Your business's success.
+          <br />
+          <Link to="/services">
+            <span className="green-text">Discover how we can help </span>
+          </Link>
+        </p>
+      </div>😎
     </Slider>
   );
 };
