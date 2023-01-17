@@ -12,7 +12,7 @@ const settings = {
   slidesToScroll: 1,
   speed: 4000,
   arrows: false,
-  pauseOnHover: true,
+  pauseOnHover: false,
   swipeToSlide: true,
   Draggable: true,
 };
