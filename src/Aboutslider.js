@@ -31,9 +31,7 @@ const Aboutslider = () => {
         <span className="green-text">TheRadar</span> is a Digital Transformation agency that specializes 
         <br />in helping businesses build amazing applications,
         <br />and experiences online, while automating business processes. 
-        <br />.
-        <br />.
-        <br />.
+        <br />
         <br />This means you can relax and make money while your business grows.
         </p>
       </div>
