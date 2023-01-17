@@ -39,7 +39,7 @@ const Aboutslider = () => {
       </div>
       <div className="big-body-text body-center">
         <p>
-          Let's upgrade your business till customers can't help but comment on the positive changes.
+          Let's upgrade your business <br />till customers can't help but comment on the positive changes.
         </p>
       </div>
       <div className="big-body-text body-center">
