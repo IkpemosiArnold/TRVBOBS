@@ -24,13 +24,15 @@ function About() {
 
     let index = 0;
     const languages = [
-      "WELCOME",
-      "BIENVENIDO",
-      "BIENVENUE",
-      "WILLKOMMEN",
+      "Welcome",
+      "Bienvenido",
+      "Bienvenue",
+      "Willkommen",
       "ようこそ",
-      "BENVENUTO",
+      "Benvenuto",
       "Ẹ Káàbọ̀",
+      "Ndewo",
+      "Barka da zuwa"
       "🥺",
     ];
 
