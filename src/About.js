@@ -32,8 +32,8 @@ function About() {
       "Benvenuto",
       "Ẹ Káàbọ̀",
       "Ndewo",
-      "Barka da zuwa"
-      "🥺",
+      "Barka da zuwa",
+      "🥺"
     ];
 
     overlay.addEventListener("click", () => {
