@@ -29,8 +29,8 @@ const Aboutslider = () => {
       <div className="big-body-text body-center">
         <p>
         <span className="green-text">TheRadar</span> is a Digital Transformation agency that specializes 
-        <br />in helping businesses build amazing applications,
-        <br />and experiences online, while automating business processes. 
+        <br />in helping businesses build amazing applications, and
+        <br />experiences online, while automating business processes. 
         <br />
         <br />This means you can relax and make money while your business grows.
         </p>
@@ -53,7 +53,7 @@ const Aboutslider = () => {
       </div>
       <div className="big-body-text body-center text-right">
         <p>
-          Say yes and chart TheCourse to Your business's success.
+          Say yes and chart the course to your business's success.
           <br />
           <Link to="/services">
             <span className="green-text">Discover how we can help </span>
