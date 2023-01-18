@@ -12,7 +12,7 @@ const settings = {
   slidesToScroll: 1,
   speed: 4000,
   arrows: false,
-  pauseOnHover: false,
+  pauseOnHover: true,
   swipeToSlide: true,
   Draggable: true,
 };
@@ -22,7 +22,7 @@ const Aboutslider = () => {
     <Slider {...settings} className="slide-area">
       <div className="big-body-text body-center text-center">
         <p>
-          <h3 className="green-text">TheRadar?</h3>
+          <h3 id="enter-button">TheRadar?</h3>
         </p>
       </div>
 
@@ -33,7 +33,7 @@ const Aboutslider = () => {
         <br />experiences online, while automating business processes. 
         <br />
         <br />This means you can relax and make money while your business grows.
-        <br /><img src="https://cdn.discordapp.com/attachments/1054728518359072798/1065389245121961984/6060l4_An_isometric_render_of_a_city_surrounding_a_big_radar_ma_b8c730ed-6fe9-4905-800b-308086561e56.png" height="100" width="100"/>
+        <br /><img src="https://cdn.discordapp.com/attachments/1054728518359072798/1065389245121961984/6060l4_An_isometric_render_of_a_city_surrounding_a_big_radar_ma_b8c730ed-6fe9-4905-800b-308086561e56.png" height="600" width="400"/>
         </p>
       </div>
       <div className="big-body-text body-center">
