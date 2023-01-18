@@ -33,7 +33,7 @@ const Aboutslider = () => {
         <br />experiences online, while automating business processes. 
         <br />
         <br />This means you can relax and make money while your business grows.
-        <br /><img src="https://cdn.discordapp.com/attachments/1054728518359072798/1065337754814251018/6060l4_An_isometric_view_of_a_city_surrounding_the_logo_of_a_ra_3a0d8d27-3564-4e55-8e32-5417ff53c7d5.png" />
+        <br /><img src="https://cdn.discordapp.com/attachments/1054728518359072798/1065389245121961984/6060l4_An_isometric_render_of_a_city_surrounding_a_big_radar_ma_b8c730ed-6fe9-4905-800b-308086561e56.png" height="100" width="100"/>
         </p>
       </div>
       <div className="big-body-text body-center">
