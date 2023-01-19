@@ -171,6 +171,16 @@ body {
   opacity: 30%;
   border-radius: 100%;
 }
+.about-bg-img-1 {
+  width: calc(100vw / 2 + 100px);
+  height: auto;
+  position: absolute;
+  top: 25vh;
+  left: -40vw;
+  right: 0;
+  opacity: 30%;
+  /* border-radius: 100%; */
+}
 .stack-top {
   z-index: 9;
 }
