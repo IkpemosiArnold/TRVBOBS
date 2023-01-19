@@ -1,6 +1,7 @@
 import Pnavbar from "./Pnavbar";
 import radarSvg from "./The_Radar_main_white_notext.svg";
 import Aboutslider from "./Aboutslider";
+import radarCity from "./radar-city-1.png";
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { motion } from "framer-motion";
