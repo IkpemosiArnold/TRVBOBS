@@ -178,7 +178,8 @@ body {
   top: 5vh;
   left: 60vw;
   right: 0;
-  opacity: 50%;
+  opacity: 100%;
+  background-blend-mode: multiply;
   /* border-radius: 100%; */
 }
 .stack-top {
