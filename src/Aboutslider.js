@@ -34,7 +34,7 @@ const Aboutslider = () => {
         <br />experiences online, while automating business processes. 
         <br />
         <br />This means you can relax and make money while your business grows.
-        <br /><img src="{radarCity}" height="400" width="600" />
+        <br /><img src={radarCity} height="400" width="600" />
         </p>
       </div>
       <div className="big-body-text body-center">
