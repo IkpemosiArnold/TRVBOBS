@@ -170,16 +170,18 @@ body {
   right: 0;
   opacity: 30%;
   border-radius: 100%;
+  z-index: 1;
 }
 .about-bg-img-1 {
-  width: 30vw;
-  height: 20vh;
+  width: 45vw;
+  height: 40vh;
   position: absolute;
-  top: 5vh;
+  top: 0vh;
   left: 60vw;
   right: 0;
   opacity: 100%;
-  background-blend-mode: multiply;
+  background-blend-mode: exclusion;
+  z-index: 0;
   /* border-radius: 100%; */
 }
 .stack-top {
