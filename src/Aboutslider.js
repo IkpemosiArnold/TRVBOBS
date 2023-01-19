@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import { Link } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import radarCity from "./radar-coty-1.png";
 
 const settings = {
   infinite: true,
@@ -33,7 +34,7 @@ const Aboutslider = () => {
         <br />experiences online, while automating business processes. 
         <br />
         <br />This means you can relax and make money while your business grows.
-        <br /><img src="radar-city-1.png" height="400" width="600"/>
+        <br /><img src="{radarCity}" height="400" width="600"/>
         </p>
       </div>
       <div className="big-body-text body-center">
