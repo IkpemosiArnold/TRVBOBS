@@ -172,13 +172,12 @@ body {
   border-radius: 100%;
 }
 .about-bg-img-1 {
-  width: calc(100vw / 2 + 100px);
-  height: auto;
+  width: 30vw;
+  height: 20vh;
   position: absolute;
-  top: 25vh;
-  left: -40vw;
+  top: 5vh;
   right: 0;
-  opacity: 100%;
+  opacity: 50%;
   /* border-radius: 100%; */
 }
 .stack-top {
