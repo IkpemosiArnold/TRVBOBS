@@ -104,6 +104,7 @@ function About() {
       <section id="about-us">
         <div id="logo-canvas">
           <img className="logo-bg" src={radarSvg} alt="TheRadar Logo" />
+          <img className="about-bg-img-1" src={radarCity} />
         </div>
         <Pnavbar />
         <Aboutslider />
