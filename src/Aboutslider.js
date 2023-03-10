@@ -85,7 +85,7 @@ const Aboutslider = () => {
         <li class="item">test</li>
         <li class="item">test</li>
       </ul>
-      
+
     </div>
   );
 };
